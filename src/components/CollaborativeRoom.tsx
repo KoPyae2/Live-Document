@@ -26,8 +26,6 @@ const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: Col
             setLoading(true);
             try {
                 if (title !== roomMetadata.title) {
-                    console.log('workkkkk');
-
                     const updatedDocument = await updateDocument(roomId, title)
                     if (updatedDocument) {
                         setEditing(false);
@@ -36,7 +34,6 @@ const CollaborativeRoom = ({ roomId, roomMetadata, users, currentUserType }: Col
                 }
             } catch (error) {
                 console.log('Title update error ', error);
-
             }
         }
     }

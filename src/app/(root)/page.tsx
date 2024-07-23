@@ -16,10 +16,6 @@ const Home = async () => {
   if (!clerkUser) redirect('/sign-in')
   const roomDocuments = await getDocuments(clerkUser.emailAddresses[0].emailAddress);
 
-  console.log(222222, roomDocuments);
-
-
-
   return (
     <main className='home-container'>
       <Header className="sticky top-0 left-0" >
